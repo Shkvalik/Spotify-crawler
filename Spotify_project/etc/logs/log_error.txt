@@ -1,0 +1,337 @@
+2021-04-05 22:02:29 ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "C:\Users\Shkvalik\Desktop\Upwork\_base-project\scrapy_app\spiders\spider.py", line 17, in start_requests
+    yield Request(url, callback=self.parse_list, errback=self.parse_error, dont_filter=True)
+AttributeError: 'PrototypeSpider' object has no attribute 'parse_error'
+2021-04-05 22:03:11 ERROR: Spider error processing <GET http://quotes.toscrape.com/page/10/> (referer: http://quotes.toscrape.com/page/9/)
+Traceback (most recent call last):
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\_base-project\scrapy_app\spiders\spider.py", line 29, in parse_list
+    yield response.follow(next_page, callback=self.parse_list)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\text.py", line 169, in follow
+    return super().follow(
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\__init__.py", line 142, in follow
+    raise ValueError("url can't be None")
+ValueError: url can't be None
+2021-07-14 23:47:51 ERROR: Spider error processing <GET http://quotes.toscrape.com/page/10/> (referer: http://quotes.toscrape.com/page/9/)
+Traceback (most recent call last):
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\_base-project\scrapy_app\spiders\spider.py", line 24, in parse_list
+    yield response.follow(next_page, callback=self.parse_list)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\text.py", line 169, in follow
+    return super().follow(
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\__init__.py", line 142, in follow
+    raise ValueError("url can't be None")
+ValueError: url can't be None
+2021-07-14 23:50:21 ERROR: Spider error processing <GET https://vstup.osvita.ua/spec/1-40-2/27-100-1509-0-0-0/> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\_base-project\scrapy_app\spiders\spider.py", line 24, in parse_list
+    yield response.follow(next_page, callback=self.parse_list)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\text.py", line 169, in follow
+    return super().follow(
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\__init__.py", line 142, in follow
+    raise ValueError("url can't be None")
+ValueError: url can't be None
+2021-07-14 23:53:54 ERROR: Spider error processing <GET https://vstup.osvita.ua/spec/1-40-2/27-100-1509-0-0-0/> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\_base-project\scrapy_app\spiders\spider.py", line 21, in parse_list
+    yield response.follow(item['URL'], callback=self.parse_list)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\text.py", line 169, in follow
+    return super().follow(
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\__init__.py", line 142, in follow
+    raise ValueError("url can't be None")
+ValueError: url can't be None
+2021-07-14 23:54:25 ERROR: Spider error processing <GET https://vstup.osvita.ua/spec/1-40-2/27-100-1509-0-0-0/> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\_base-project\scrapy_app\spiders\spider.py", line 21, in parse_list
+    yield response.follow(item['URL'], callback=self.parse_list)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\text.py", line 169, in follow
+    return super().follow(
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\__init__.py", line 142, in follow
+    raise ValueError("url can't be None")
+ValueError: url can't be None
+2021-07-14 23:55:21 ERROR: Spider error processing <GET https://vstup.osvita.ua/spec/1-40-2/27-100-1509-0-0-0/> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\_base-project\scrapy_app\spiders\spider.py", line 22, in parse_list
+    yield response.follow(item['URL'], callback=self.parse_list)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\text.py", line 169, in follow
+    return super().follow(
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\__init__.py", line 142, in follow
+    raise ValueError("url can't be None")
+ValueError: url can't be None
+2021-07-14 23:55:59 ERROR: Spider error processing <GET https://vstup.osvita.ua/spec/1-40-2/27-100-1509-0-0-0/> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\_base-project\scrapy_app\spiders\spider.py", line 22, in parse_list
+    yield response.follow(item['URL'], callback=self.parse_list)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\text.py", line 169, in follow
+    return super().follow(
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\__init__.py", line 142, in follow
+    raise ValueError("url can't be None")
+ValueError: url can't be None
+2021-07-15 00:07:06 ERROR: Spider error processing <GET http://quotes.toscrape.com/page/10/> (referer: http://quotes.toscrape.com/page/9/)
+Traceback (most recent call last):
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\_base-project\scrapy_app\spiders\spider.py", line 24, in parse_list
+    yield response.follow(next_page, callback=self.parse_list)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\text.py", line 169, in follow
+    return super().follow(
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\__init__.py", line 142, in follow
+    raise ValueError("url can't be None")
+ValueError: url can't be None
+2021-07-15 00:07:25 ERROR: Spider error processing <GET http://quotes.toscrape.com/page/10/> (referer: http://quotes.toscrape.com/page/9/)
+Traceback (most recent call last):
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\_base-project\scrapy_app\spiders\spider.py", line 24, in parse_list
+    yield response.follow(next_page, callback=self.parse_list)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\text.py", line 169, in follow
+    return super().follow(
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\__init__.py", line 142, in follow
+    raise ValueError("url can't be None")
+ValueError: url can't be None
+2021-07-15 00:07:57 ERROR: Spider error processing <GET http://quotes.toscrape.com/page/10/> (referer: http://quotes.toscrape.com/page/9/)
+Traceback (most recent call last):
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Shkvalik\Desktop\Upwork\_base-project\scrapy_app\spiders\spider.py", line 24, in parse_list
+    yield response.follow(next_page, callback=self.parse_list)
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\text.py", line 169, in follow
+    return super().follow(
+  File "C:\Users\Shkvalik\Desktop\Upwork\venv\lib\site-packages\scrapy\http\response\__init__.py", line 142, in follow
+    raise ValueError("url can't be None")
+ValueError: url can't be None
